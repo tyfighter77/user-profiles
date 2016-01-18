@@ -5,8 +5,10 @@ angular.module('userProfiles')
     login: function( user ) {
       return $http ({
         method: 'POST',
-        url: '/profile',
+        url: '/api/login',
         data: user
+      }).then(function(response){
+        return response.data;
       });
     },
 
@@ -15,7 +17,7 @@ angular.module('userProfiles')
         method: 'GET',
         url: '/api/profiles'
       }).then(function(response){
-        return response;
+        return response.data;
       });
     }
   };

@@ -3,8 +3,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cors = require('cors');
 var config = require('./config.js');
-var config = require('controllers/profileCtrl.js');
-var config = require('controllers/userCtrl.js');
+var profileCtrl = require('./controllers/profileCtrl.js');
+var usersCtrl = require('./controllers/userCtrl.js');
 
 var app = express();
 
